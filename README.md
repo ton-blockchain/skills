@@ -1,4 +1,4 @@
-# Acton dev skills
+# TON dev skills
 
 Reusable coding-agent skills for Acton, Tolk, TON, and FunC-to-Tolk workflows.
 
@@ -31,23 +31,25 @@ docs, commands, project layout, and safety checks before editing code.
 Install all skills from the published skills directory:
 
 ```bash
-npx skills add https://github.com/ton-blockchain/acton-contracts/tree/skills/skills/
+npx skills add https://github.com/ton-blockchain/skills/tree/skills/skills/
 ```
 
 Install an individual skill by changing the final path:
 
 ```bash
-npx skills add https://github.com/ton-blockchain/acton-contracts/tree/skills/skills/acton
-npx skills add https://github.com/ton-blockchain/acton-contracts/tree/skills/skills/tolk
-npx skills add https://github.com/ton-blockchain/acton-contracts/tree/skills/skills/func2tolk
-npx skills add https://github.com/ton-blockchain/acton-contracts/tree/skills/skills/ton-blockchain
+npx skills add https://github.com/ton-blockchain/skills/tree/skills/skills/acton
+npx skills add https://github.com/ton-blockchain/skills/tree/skills/skills/tolk
+npx skills add https://github.com/ton-blockchain/skills/tree/skills/skills/func2tolk
+npx skills add https://github.com/ton-blockchain/skills/tree/skills/skills/ton-blockchain
 ```
 
 Install for a specific coding agent:
 
 ```bash
-npx skills add https://github.com/ton-blockchain/acton-contracts/tree/skills/skills/ton-blockchain -g -a codex -y
-npx skills add https://github.com/ton-blockchain/acton-contracts/tree/skills/skills/func2tolk -g -a claude-code -y
+# For Codex
+npx skills add https://github.com/ton-blockchain/skills/tree/skills/skills/ton-blockchain -g -a codex -y
+# For Claude Code
+npx skills add https://github.com/ton-blockchain/skills/tree/skills/skills/func2tolk -g -a claude-code -y
 ```
 
 After installation, mention a skill by name in your coding-agent prompt:
@@ -71,18 +73,16 @@ handling, and getter compatibility.
 ```
 
 ```text
-$func2tolk port this FunC contract to idiomatic Tolk and preserve the TL-B
-storage and message layout.
+$func2tolk port this FunC contract to idiomatic Tolk and preserve storage and message layout.
 ```
 
 ```text
-$ton-blockchain find the relevant TON Docs for this wallet standard before
-implementing the message handlers.
+$ton-blockchain how many references does the cell contain
 ```
 
 ## Repository layout
 
-Each skill is self-contained:
+Each skill is self-contained folder:
 
 - `SKILL.md` contains the instructions loaded by the coding agent.
 - `agents/openai.yaml` contains OpenAI agent metadata.
