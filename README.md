@@ -7,6 +7,8 @@ docs, commands, project layout, and safety checks before editing code.
 
 **Note**: Skills guide the assistant, but they do not replace local validation.
 
+Get started with Acton: https://ton-blockchain.github.io/acton
+
 ## Available skills
 
 - [`acton`](./acton): Acton CLI workflows for installation and updates, project
@@ -28,7 +30,7 @@ docs, commands, project layout, and safety checks before editing code.
 
 ## Installation
 
-Use `npx skills add -g` to install Acton skills globally:
+Use `npx skills add -g` to install TON dev skills globally:
 
 ```bash
 npx skills add -g https://github.com/ton-blockchain/skills
@@ -55,8 +57,6 @@ Install an individual skill by changing the final path:
 ```bash
 npx skills add https://github.com/ton-blockchain/skills/acton
 npx skills add https://github.com/ton-blockchain/skills/tolk
-npx skills add https://github.com/ton-blockchain/skills/func2tolk
-npx skills add https://github.com/ton-blockchain/skills/ton-blockchain
 ```
 
 After installation, mention a skill by name in the coding-agent prompt, for
