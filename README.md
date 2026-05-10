@@ -28,38 +28,39 @@ docs, commands, project layout, and safety checks before editing code.
 
 ## Installation
 
-Install all skills from the published skills directory:
+Use `npx skills add -g` to install Acton skills globally:
 
 ```bash
-npx skills add https://github.com/ton-blockchain/skills/tree/skills/skills/
+npx skills add -g https://github.com/ton-blockchain/skills
+```
+
+Remove the `-g` flag to install skills in the current project only:
+
+```bash
+npx skills add https://github.com/ton-blockchain/skills
+```
+
+Pass `-a <AGENT_NAME>` to install skills for a specific agent only:
+
+```bash
+# Codex
+npx skills add -a codex https://github.com/ton-blockchain/skills
+
+# Claude Code
+npx skills add -a claude-code https://github.com/ton-blockchain/skills
 ```
 
 Install an individual skill by changing the final path:
 
 ```bash
-npx skills add https://github.com/ton-blockchain/skills/tree/skills/skills/acton
-npx skills add https://github.com/ton-blockchain/skills/tree/skills/skills/tolk
-npx skills add https://github.com/ton-blockchain/skills/tree/skills/skills/func2tolk
-npx skills add https://github.com/ton-blockchain/skills/tree/skills/skills/ton-blockchain
+npx skills add https://github.com/ton-blockchain/skills/acton
+npx skills add https://github.com/ton-blockchain/skills/tolk
+npx skills add https://github.com/ton-blockchain/skills/func2tolk
+npx skills add https://github.com/ton-blockchain/skills/ton-blockchain
 ```
 
-Install for a specific coding agent:
-
-```bash
-# For Codex
-npx skills add https://github.com/ton-blockchain/skills/tree/skills/skills/ton-blockchain -g -a codex -y
-# For Claude Code
-npx skills add https://github.com/ton-blockchain/skills/tree/skills/skills/func2tolk -g -a claude-code -y
-```
-
-After installation, mention a skill by name in your coding-agent prompt:
-
-```text
-$acton
-$tolk
-$ton-blockchain
-$func2tolk
-```
+After installation, mention a skill by name in the coding-agent prompt, for
+example `$acton`, `$tolk`, `$ton-blockchain`, or `$func2tolk`.
 
 ## Example prompts
 
