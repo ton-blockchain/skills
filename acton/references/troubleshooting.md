@@ -6,7 +6,7 @@ Use these checks before deeper debugging.
 
 - Check `command -v acton`.
 - If missing and the task requires the CLI, install it:
-  - `curl -LsSf https://ton.org/acton/install.sh | sh`
+  - `curl -LsSf https://github.com/ton-blockchain/acton/releases/latest/download/acton-installer.sh | sh`
 - Open a fresh shell or reload the shell profile if `acton` is still not on `PATH`.
 - Verify with `acton --version`.
 

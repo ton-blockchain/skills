@@ -4,7 +4,7 @@ Use this file for fast command selection before opening full docs or `acton help
 
 ## Setup and project context
 
-- `curl -LsSf https://ton.org/acton/install.sh | sh`
+- `curl -LsSf https://github.com/ton-blockchain/acton/releases/latest/download/acton-installer.sh | sh`
 - Use when `acton` is not installed and the task requires the CLI.
 
 - `acton --version`

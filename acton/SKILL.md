@@ -34,7 +34,7 @@ description: "Acton CLI workflow for TON smart contract development in Tolk: ins
 If `acton` is missing and the task requires running it, install the public binary:
 
 ```bash
-curl -LsSf https://ton.org/acton/install.sh | sh
+curl -LsSf https://github.com/ton-blockchain/acton/releases/latest/download/acton-installer.sh | sh
 ```
 
 Then open a fresh shell or reload the updated shell profile if needed, and verify:
