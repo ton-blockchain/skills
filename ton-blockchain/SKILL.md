@@ -12,7 +12,7 @@ Prefer primary sources from TON Docs.
 Fetch and skim the TON Docs “start here” page to align terminology and the docs’ structure before making assumptions:
 
 ```bash
-curl -fsSL https://docs.ton.org/start-here.md
+curl -fsSL https://docs.ton.org/llms/start-here/content.md
 ```
 
 If the `.md` URL fails, try the HTML page:
@@ -39,10 +39,10 @@ curl -fsSL https://docs.ton.org/llms.txt | rg -n "<topic>|<keyword>" || true
 
 ## 3) Pull only the pages you need
 
-For any relevant page path from `llms.txt`, prefer the Markdown source by appending `.md`:
+For any relevant page path from `llms.txt`, prefer the Markdown source by appending `/content.md` and prepending `/llms`:
 
 ```bash
-curl -fsSL "https://docs.ton.org/<page-path>.md"
+curl -fsSL "https://docs.ton.org/llms/<page-path>/content.md"
 ```
 
 If that 404s, try the path as-is (some entries may already include `.md` or may not support source rendering):
