@@ -33,7 +33,7 @@ Get started with Acton: https://ton-blockchain.github.io/acton
 Use `npx skills add -g` to install TON dev skills globally:
 
 ```bash
-npx skills add -g https://github.com/ton-blockchain/skills
+npx skills add https://github.com/ton-blockchain/skills -g
 ```
 
 Remove the `-g` flag to install skills in the current project only:
@@ -46,10 +46,10 @@ Pass `-a <AGENT_NAME>` to install skills for a specific agent only:
 
 ```bash
 # Codex
-npx skills add -a codex https://github.com/ton-blockchain/skills
+npx skills add https://github.com/ton-blockchain/skills -a codex
 
 # Claude Code
-npx skills add -a claude-code https://github.com/ton-blockchain/skills
+npx skills add https://github.com/ton-blockchain/skills -a claude-code
 ```
 
 Install an individual skill by changing the final path:
