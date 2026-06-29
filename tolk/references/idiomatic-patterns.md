@@ -5,6 +5,7 @@ Use this reference for implementing or reviewing Tolk contract code.
 ## Table of Contents
 
 - Project layout
+- Naming conventions
 - Storage
 - Message schemas
 - Internal messages
@@ -28,6 +29,14 @@ Prefer a small set of focused files:
 - `scripts/*`: deployment or operational flows if the project already uses scripts.
 
 Keep shared message/storage types importable without importing an entrypoint file. This avoids duplicate reserved entrypoint definitions in tests, wrappers, or multi-contract projects.
+
+## Naming Conventions
+
+- `camelCase` for variables, functions, methods, and struct fields.
+- `PascalCase` for structs, enums, enum members, type aliases, and type parameters.
+- `SCREAMING_SNAKE_CASE` for constants.
+
+Exception: getter function names should match the standard they implement when a standard defines them (e.g. `get_nft_data`, `get_wallet_data`). For getters with no prescribed name, use `camelCase`.
 
 ## Storage
 
